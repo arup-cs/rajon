@@ -15,17 +15,17 @@ int searchLinear (int s, int *list, int n){
 int searchBinary(int s, int * list, int n){
 	int i,middle,right;
 	static int left=0;
-	right=n-1;
+	right=n;
 	middle=(left+right)/2;
-	if(left>=right){
+	if(left>=right||right<=middle){
 		return -1;
 	}
 	if(s==list[middle]){
 		return middle;
 	}else if(s>list[middle]){
-		left=middle;
+		left=middle+1;
 	}else if(s<list[middle]){
-		right=middle;
+		right=middle-1;
 	}
 	searchBinary(s, list, right);
 	
