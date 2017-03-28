@@ -46,10 +46,7 @@ int main(){
 		printf("Enter a number:");
 		scanf("%d",&numbers[i]);
 	}
-	printf("you have entered\n");
-	for(i=0;i<10;i++){
-		printf("%d  ",numbers[i]);	
-	}
+
 	printf("What value you are searching?");
 	scanf("%d",&userInput);
 	result=searchLinear(userInput, numbers,10);
